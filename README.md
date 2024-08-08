@@ -5,10 +5,17 @@ Simple weather app which uses OpenWeather API.
 ## Descritption
 
 There are two panels, not pages or subpages. User can change between panels. 
-1. Weather panel - current weather conditions are shown here
-2. Forecast panel - forecast for 5 days in 6h intervals
-
 There is input, which can be used for searching weather information for desired  city.
+
+### 1. Weather panel
+User can get some basic weather informations based on his city choice.
+
+![Interface](/weather-app1.png)
+
+### 2. Forecast panel
+Here is layout for 5-day forecast. 6h interval was choosen. Forecast cards are placed in the carousel/slider. Carousel is responsive.
+
+![Interface](/weather-app2.png)
 
 ## Instalation
 
