@@ -12,14 +12,14 @@ There is input, which can be used for searching weather information for desired 
 
 ## Instalation
 
-Clone gitHub repository
+1. Clone gitHub repository
 ```git clone https://github.com/YourUsername/Weather-app.git```
 
-Navigate to project folder
+2. Navigate to project folder
 ```cd weather-app```
 
-Install dependencies 
+3. Install dependencies 
 ```npm install```
 
-And run
+4. And run
 ```npm start```
