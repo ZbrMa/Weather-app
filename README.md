@@ -11,12 +11,12 @@ Background color depends on month. Winter is blue, spring is green, summer is ye
 ### 1. Weather panel
 User can get some basic weather informations based on his city choice.
 
-![Interface](/weather-app1.png)
+![Interface](/public/weather-app1.png)
 
 ### 2. Forecast panel
 Here is layout for 5-day forecast. 6h interval was choosen. Forecast cards are placed in the carousel/slider. Carousel is responsive.
 
-![Interface](/weather-app2.png)
+![Interface](/public/weather-app2.png)
 
 ## Instalation
 
