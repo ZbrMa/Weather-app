@@ -35,13 +35,6 @@
 }
 
 @media only screen and (min-width: 768px){
-    .dash-container {
-        width: 50%;
-    }
-
-    .dash-title {
-        font-size: 2.4rem;
-    }
 
     .main-info {
         grid-template-columns: repeat(3,1fr);
