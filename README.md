@@ -6,6 +6,7 @@ Simple weather app which uses OpenWeather API.
 
 There are two panels, not pages or subpages. User can change between panels. 
 There is input, which can be used for searching weather information for desired  city.
+Background color depends on month. Winter is blue, spring is green, summer is yellow and atumn is orange. Theme is done by React Context.
 
 ### 1. Weather panel
 User can get some basic weather informations based on his city choice.
