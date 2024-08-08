@@ -18,7 +18,7 @@ Clone gitHub repository
 Navigate to project folder
 ```cd weather-app```
 
-install dependencies 
+Install dependencies 
 ```npm install```
 
 And run
