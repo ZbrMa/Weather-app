@@ -10,7 +10,7 @@ There are two panels, not pages or subpages. User can change between panels.
 
 There is input, which can be used for searching weather information for desired  city.
 
-## Install `npm start`
+## Instalation
 
 Clone gitHub repository
 ```git clone https://github.com/YourUsername/Weather-app.git```
