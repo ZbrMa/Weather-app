@@ -25,8 +25,6 @@ Here is layout for 5-day forecast. 6h interval was choosen. Forecast cards are p
 
 1. Clone gitHub repository ```git clone https://github.com/ZbrMa/Weather-app.git```
 
-2. Navigate to project folder ```cd weather-app```
+2. Install dependencies  ```npm install```
 
-3. Install dependencies  ```npm install```
-
-4. And run ```npm start```
+2. And run ```npm start```
