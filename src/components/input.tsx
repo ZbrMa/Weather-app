@@ -1,20 +1,29 @@
-import { useState } from "react";
-import { FaMagnifyingGlass } from "react-icons/fa6";
 import './styles/input.css';
+import { InputHTMLAttributes, forwardRef } from "react";
 
-type Props = {
-    returnValue:(value:string)=>void;
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+    placeholderPosition?: 'inside' | 'outside';
+    placeholder: string;
 }
 
-export function Input({returnValue}:Props) {
-    const [inputVal,setInputVal] = useState('');
+export const Input = forwardRef<HTMLInputElement, Props>(
+    ({ placeholderPosition = 'outside', placeholder, ...props }, ref) => {
 
-    return(
-        <div className="input-container">
-            <input className="input-elem" onChange={(e)=>setInputVal(e.target.value)} type="text" placeholder="City..."></input>
-            <button className="btn" onClick={()=>returnValue(inputVal)}>
-                <FaMagnifyingGlass></FaMagnifyingGlass>
-            </button>
-        </div>
-    );
-}
+        if (placeholderPosition === 'inside') {
+            return (
+                <input ref={ref} {...props} placeholder={placeholder} />
+            );
+        };
+
+        if (placeholderPosition === 'outside') {
+            return (
+                <div className="input__container">
+                    <label className="input--label">{placeholder}:</label>
+                    <input ref={ref} {...props} />
+                </div>
+            );
+        };
+
+        return null;
+    }
+);

@@ -1,56 +1,44 @@
-.info-card {
+.card__container {
     width: 100%;
-    padding: 8px;
+    padding: 4px;
     box-sizing: border-box;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    background-color: var(--primary);
+    border-radius: 8px;
+    gap: 8px;
+}
+
+.card--left,.card--center, .card--right {
+    align-content: center;
+}
+
+.card--left {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
-.card-title {
-    font-size: 1rem;
-    color: var(--lightGray);
-    margin-bottom: 16px;
-}
-
-.card-info {
-    font-size: 2rem;
-    color: var(--lightGrayHover);
-    font-weight: 200;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card-info svg{
-    width: 100%;
-    height: 100%;
+.card--left svg {
+    width: 32px;
+    height: 32px;
+    color: rgb(39, 133, 255);
     margin: auto;
 }
 
-@media only screen and (min-width:1220px){
-    .card-info {
-        font-size: 2.4rem;
-    }
-
-    .card-title {
-        font-size: 1.4rem;
-    }
-    .info-card {
-        aspect-ratio: 1 / 1;
-    }
-
+.card--center h3 {
+    margin: 0 0 8px 0;
+    color: var(--lightGrayHover);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-@media only screen and (max-width:900px){
-    
+.card--data {
+    font-size: 1.4rem;
+    color: black;
+}
 
-    .card-info {
-        font-size: 1.6rem;
-    }
-
-    .card-title {
-        font-size: 0.8rem;
-    }
+.card--right {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
 }

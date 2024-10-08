@@ -1,11 +1,12 @@
 import { Dashboard } from "../blocks/dashboard";
 import { Layout } from "./layout";
+import { MapBlock } from "../blocks/mapBlock";
 
-export function Main() {  
+export function Map() {  
 
     return(
             <Layout>
-                <Dashboard/>
+                <MapBlock/>
             </Layout>
     );
 }

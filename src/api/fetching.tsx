@@ -4,6 +4,7 @@ import { Weather } from "../types/weather";
 import { WeatherForecast } from "../types/forecast";
 
 const API_KEY = '1afc1505109667925767068cd0256c13';
+const today = new Date();
 
 function useFetchWeather(city:string){
     const [weather,setWeather] = useState<Weather | null>(null);
@@ -60,4 +61,34 @@ function useForeastFetch(city:string){
 
 };
 
-export {useFetchWeather,useForeastFetch};
+function useMapFetch(){
+    const [rainLayerUrl, setRainLayerUrl] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        const fetchLayerUrl = async () => {
+        setLoading(true);
+        try {
+            const url = `https://maps.openweathermap.org/maps/2.0/weather/1h/PARAIN/{z}/{x}/{y}?date=${today}&appid=${API_KEY}`;
+            setRainLayerUrl(url);
+        } catch {
+            setRainLayerUrl(null);
+            setError(true);
+        }
+        setLoading(false);
+        };
+
+        fetchLayerUrl();
+    }, []);
+
+    return { rainLayerUrl, loading, error };
+}
+
+async function getCoordinates(place:String) {
+    const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${place}&format=json&limit=1`);
+    const data = await response.json();
+    return data[0];
+  }
+
+export {useFetchWeather,useForeastFetch,useMapFetch,getCoordinates};
