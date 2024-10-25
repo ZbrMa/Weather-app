@@ -46,6 +46,10 @@ form {
     color: var(--secondary);
 }
 
+.form__header button svg {
+    display: block;
+}
+
 form button {
     background-color: rgb(39, 133, 255) !important;
     color: var(--primary) !important;

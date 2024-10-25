@@ -73,6 +73,6 @@ export function BarChart({labels,inputData,title,barColor,style}:Props){
   };
 
   return (
-      <Bar data={data} options={options} style={style} />
+      <Bar data={data} options={options} style={style}/>
   );
 };

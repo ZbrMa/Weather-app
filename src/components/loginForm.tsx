@@ -2,8 +2,10 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "./input";
 import './styles/loginForm.css';
 import { IoCloseOutline } from "react-icons/io5";
-import { useDispatch } from "react-redux";
-import { login, users } from "../slices/authSlice";
+import { useDispatch,useSelector } from "react-redux";
+import { login, users, selectLogin } from "../slices/authSlice";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 type Inputs = {
     name:string,
@@ -17,6 +19,12 @@ type FormProps = {
 
 export function LoginForm({trigger,close}:FormProps){
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const loggedIn = useSelector(selectLogin);
+
+    useEffect(()=>{
+        loggedIn && navigate('/');
+    },[loggedIn]);
 
     const {
         handleSubmit,

@@ -105,7 +105,7 @@ export function Dashboard(){
                             inputData={chartsConfig[activeChart].data}
                             labels={forecast.list.map(item=>new Date(item.dt*1000).getDate() + '.' + (new Date(item.dt*1000).getMonth() + 1) + ' ' + (new Date(item.dt*1000).getHours() + 1 )+ 'h')}
                             barColor={chartsConfig[activeChart].barColor}
-                            style={{gridColumn:'1 / 4', width:'100%',height:'calc(100% - 16px)', backgroundColor:'var(--primary)',borderRadius:'8px',padding:'8px',boxSizing:'border-box'}}
+                            style={{gridColumn:'1 / 4',aspectRatio:'auto', width:'100%',height:'calc(100% - 16px)', backgroundColor:'var(--primary)',borderRadius:'8px',padding:'8px',boxSizing:'border-box'}}
                         />
                     ):(
                         <div>chyba</div>
