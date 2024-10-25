@@ -3,23 +3,24 @@
 Simple weather app which uses OpenWeather API.
 
 ## Descritption
-
-There are two panels, not pages or subpages. User can change between panels.  
-
+Small weather application.
 There is input, which can be used for searching weather information for desired  city.  
 
-Background color depends on month. Winter is blue, spring is green, summer is yellow and atumn is orange. Theme is done by React Context.  
-
-
-### 1. Weather panel
+### 1. Dashboard panel
 User can get some basic weather informations based on his city choice.  
 
-![Interface](/public/weather-app1.png)
+![Interface](/public/prehled.png)
 
-### 2. Forecast panel
-Here is layout for 5-day forecast. 6h interval was choosen. Forecast cards are placed in the carousel/slider. Carousel is responsive.  
+### 2. Map panel
+Map with rain radar.   
 
-![Interface](/public/weather-app2.png)
+![Interface](/public/mapa.png)
+
+
+### 3. Login
+Not logged in user is named guest. There are 3 test users [{n:alena, p: nazdar},{n:franta, p:ahoj},{n:jarda, p:cau}]. State management is done by Redux.  
+
+![Interface](/public/login.png)  
 
 ## Instalation
 
