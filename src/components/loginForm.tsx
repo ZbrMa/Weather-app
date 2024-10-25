@@ -3,7 +3,7 @@ import { Input } from "./input";
 import './styles/loginForm.css';
 import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
-import { login } from "../slices/authSlice";
+import { login, users } from "../slices/authSlice";
 
 type Inputs = {
     name:string,
@@ -44,7 +44,22 @@ export function LoginForm({trigger,close}:FormProps){
                 <Input id="name" placeholder="Jméno" {...register("name")} required type="text"/>
                 <Input id="pass" placeholder="Heslo" {...register("pass")} required type="password"/>
                 <button type='submit'>Přihlásit se</button>
-                
+                <table className="users">
+                    <thead>
+                    <tr>
+                        <th>Jméno</th>
+                        <th>Heslo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {users.map((user,index)=>(
+                            <tr key={index}>
+                                <td>{user.username}</td>
+                                <td>{user.password}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </form>
         </div>
     );

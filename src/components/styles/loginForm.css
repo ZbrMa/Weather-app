@@ -20,7 +20,8 @@ form {
     background-color: var(--primary);
     padding: 16px 32px;
     border-radius: 8px;
-    width: 20%;
+    min-width: 300px;
+    width: 25%;
     margin: 64px auto;
     display: flex;
     flex-direction: column;
@@ -46,6 +47,35 @@ form {
 }
 
 form button {
+    background-color: rgb(39, 133, 255) !important;
+    color: var(--primary) !important;
+    font-size: 1.2rem !important;
+    /*padding: 8px !important;*/
+}
+
+table {
+    margin-top: 16px;
+}
+
+thead {
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondary);
+}
+
+th {
+    text-align: left;
+    font-weight: 400;
     background-color: rgb(39, 133, 255);
     color: var(--primary);
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+td {
+    color: vaR(--secondary);
+    padding: 0 8px;
+}
+
+tr:nth-child(even) {
+    background-color: vaR(--lightGray);
 }

@@ -60,3 +60,17 @@
     gap: 8px;
 }
 
+@media only screen and (max-width:992px){
+    .locations__body {
+        height: calc(100vh - 87.2px);
+    }
+
+    .locations__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-height: fit-content;
+        padding-bottom: 78.2px;
+        overflow-y: visible;
+    }
+}

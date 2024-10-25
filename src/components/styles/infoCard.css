@@ -42,3 +42,16 @@
     color: black;
     text-align: center;
 }
+
+@media only screen and (max-width:992px){
+    .card__container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .card--center {
+        text-align: center;
+    }
+}

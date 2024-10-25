@@ -25,3 +25,18 @@
     border-radius: 3px;
   }
   
+  .map__block {
+    position: relative;
+  }
+
+  @media only screen and (max-width:992px){
+      .map__block {
+        height: calc(100vh - 87.2px) !important;
+      }
+
+      .legend {
+        bottom: 8px;
+        right: 8px;
+        padding: 5px;
+      }
+  }

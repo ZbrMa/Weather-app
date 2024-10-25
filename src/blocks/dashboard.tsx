@@ -90,7 +90,7 @@ export function Dashboard(){
                     <h2>Dnešní přehled</h2>
                     <InfoCard data={weather?.main.humidity + ' %'} title='Vlhkost' loading={weatherLoading} image={<FaWater/>}/>
                     <InfoCard data={weather?.main.pressure + ' Bar'} title='Tlak' loading={weatherLoading} image={<MdOutlineDashboard/>}/>
-                    <InfoCard data={weather?.wind.speed + ' m/s'} title='Rychlost větru' loading={weatherLoading} image={<FaWind/>}/>
+                    <InfoCard data={weather?.wind.speed + ' m/s'} title='Vítr' loading={weatherLoading} image={<FaWind/>}/>
                     <div className="forecast__container">
                         <h2>Předpověď: {chartsConfig[activeChart].title}</h2>
                         <div className='forecast__buttons'>

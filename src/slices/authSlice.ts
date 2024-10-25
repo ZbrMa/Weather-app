@@ -1,7 +1,7 @@
 import { createSlice,configureStore, PayloadAction } from "@reduxjs/toolkit";
 import { IUser } from "../types/user";
 
-const users:IUser[] = [
+export const users:IUser[] = [
     {   
         username:'alena',
         name:'Alena Mladá',
@@ -25,14 +25,12 @@ const users:IUser[] = [
     }
 ];
 
-// Definice typu RootState (který zahrnuje typ stavu uživatele)
 export interface RootState {
     user: {
         user: IUser;
         loggedIn:boolean,
     };
 }
-
 
 const initialUser:IUser = {
     username:'host',

@@ -73,3 +73,11 @@ button:hover {
 button svg {
   margin: auto;
 }
+
+@media only screen and (max-width:992px){
+  button {
+    padding: 4px;
+    height: fit-content;
+    display: flex;
+  }
+}
